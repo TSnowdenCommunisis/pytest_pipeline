@@ -14,7 +14,7 @@ def has_lower(str_to_check):
 
 
 def has_upper(str_to_check):
-    
+
     return any(char.isupper() for char in str_to_check)
 
 
@@ -25,7 +25,8 @@ def make_upper(str_to_check):
 
 def check_password(str):
 
-    return check_length(str) and has_number(str) and has_lower(str) and has_upper(str)
+    return check_length(str) and has_number(str) and has_lower(str) \
+        and has_upper(str)
 
 
-print (check_password("It57qwp91"))
+print(check_password("It57qwp91"))
