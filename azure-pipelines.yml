@@ -24,6 +24,11 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
+    python -m pip install flake8
+    flake8 .
+  displayName: 'Run lint tests'
+  
+- script: |
     pip install pytest pytest-cov pytest-azurepipelines
     pytest --doctest-modules --junitxml=junit/test-results.xml --cov=. --cov-report=xml --cov-report=html
   displayName: 'pytest'
